@@ -164,14 +164,6 @@ ruff check .
 
 ---
 
-## How to publish this on GitHub (fast checklist)
-
-1. Create a new repo on GitHub: `orbitlab` (Public).
-2. Replace placeholders:
-   - `YOUR NAME` in LICENSE and `CITATION.cff`
-   - `YOUR_GITHUB_USERNAME` in README and `CITATION.cff`
-3. Push your code (steps explained below in the guide).
-
 ---
 
 ## License
